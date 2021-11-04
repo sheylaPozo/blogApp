@@ -1,7 +1,8 @@
+# Blog App
+
 ![Microverse](https://img.shields.io/badge/Microverse2.0-blueviolet) ![app](https://img.shields.io/badge/Myapp-blue)
 
-# Blog App
- ---
+Blog App
 
 > Blog website that shows a list of posts and empower readers to interact with them by adding comments and liking posts.
 
