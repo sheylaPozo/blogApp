@@ -1,4 +1,4 @@
-# Blog
+# Blog App
 
 ![Microverse](https://img.shields.io/badge/Microverse2.0-blueviolet) ![app](https://img.shields.io/badge/Myapp-blue)
 
