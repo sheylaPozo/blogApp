@@ -5,17 +5,16 @@ default: &default
 
 development:
   <<: *default
-  database: my_blog
+  database: my_blog_db
   host: localhost
-  username: poliuser
-  password: poliuser123
+  username: stamenova
+  password: stamenova123
+# test:
+#   <<: *default
+#   database: my_blog_db
 
-test:
-  <<: *default
-  database: my_blog
-
-production:
-  <<: *default
-  database: my_blog
-  username: poliuser
-  password: poliuser123
+# production:
+#   <<: *default
+#   database: my_blog_db
+#   username: stamenova
+#   password: stamenova123
