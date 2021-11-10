@@ -1,1 +1,26 @@
-<h1>Here is a profile of a given user</h1>
+<%= render  @user%>
+<div class = "bio">
+  <p>Bio</p>
+  <p><%= @user.bio%></p>
+</div>
+  <ul>
+  <% @user.recent_posts.each_with_index do |post, i|%>
+  <li class="list-posts">
+    <p>Post #<%= i + 1 %> </p>
+    <p><%= post.text%></p>
+    <div class= 'comments-likes'>
+      <p>Comments: <%= post.comments_counter.to_i %></p>
+      <p>Likes: <%= post.likes_counter.to_i %></p>
+    </div>
+  </li>
+  <% end %>
+</ul>
+<button class='btn'>
+<%= link_to "See all posts", user_posts_path(@user) %>
+</button>
+
+
+
+
+
+

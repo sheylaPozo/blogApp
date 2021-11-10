@@ -1,1 +1,18 @@
-<h1>Here is a detailed page of a post</h1>
+<div class = 'post-by-id'>
+  <p>Post #<%= @posts.find_index(@post) +1 %> by <%= @post.user.name %></p>
+  <div class = "comments-likes ">
+    <p>Comments: <%= @post.comments_counter.to_i %></p>
+    <p>Likes: <%= @post.likes_counter.to_i %></p>
+  </div>
+  <p class = 'post-by-id-post'><%= @post.text %></p>
+</div>
+<div>
+  <ul class="<%= comments?(@post)%>">
+    <% @post.comments.each do |comment| %>
+      <li>
+        <%= comment.user.name %>:
+        <%= comment.text %>
+      </li>
+  <% end %>
+  </ul>
+</div>
