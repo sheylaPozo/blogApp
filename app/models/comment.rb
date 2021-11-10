@@ -4,7 +4,7 @@ class Comment < ApplicationRecord
 
   after_create :update_counter
 
-  def update_counter
+  def update_count
     post.update(comments_counter: post.comments.size)
   end
 end
