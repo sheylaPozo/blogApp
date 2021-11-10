@@ -13,3 +13,111 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.main-ul {
+  margin-top: 5rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main-div-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  border: 1px solid black;
+  height: 156px;
+  align-items: center;
+  padding: 3rem;
+  width: 100%;
+}
+
+.bio {
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid black;
+}
+
+.list-posts {
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+
+.comments-likes {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  font-size: 22px;
+  padding: 0.5rem;
+  margin-top: 3rem;
+  margin-left: 50%;
+  margin-bottom: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.list-comments {
+  padding: 1rem;
+  line-height: 28px;
+  margin-top: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+
+.no-.list-comments {
+  display: none;
+}
+
+.post-by-id {
+  margin-top: 5rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.post-by-id-post {
+  margin-top: 1rem;
+}
+
+.photo {
+  border: 1px solid black;
+}
