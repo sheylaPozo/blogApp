@@ -1,11 +1,5 @@
-require 'pry'
 class UsersController < ApplicationController
-  def index
-    # @users = User.all
-    # @current_user = current_user
-  end
+  def index; end
 
-  def show
-    # @user = User.find(params[:id])
-  end
+  def show; end
 end
