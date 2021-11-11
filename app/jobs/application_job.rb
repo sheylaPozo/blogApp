@@ -3,5 +3,5 @@ class ApplicationJob < ActiveJob::Base
   # retry_on ActiveRecord::Deadlocked
 
   # Most jobs are safe to ignore if the underlying records are no longer available
-  # discard_on ActiveJob::DeserializationErro
+  # discard_on ActiveJob::DeserializationError
 end
