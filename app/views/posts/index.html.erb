@@ -1,3 +1,13 @@
+
+<div class = "buttons">
+  <button class = "two-btns">
+  <%= link_to 'Back', root_path %>
+  </button>
+  <button class = "two-btns">
+  <%= link_to "New Post", new_user_post_path(user_id: @user.id) %>
+  </button>
+</div>
+
 <%= render  @user%>
 <ul>
 <% @posts.each_with_index do |post, i|%>

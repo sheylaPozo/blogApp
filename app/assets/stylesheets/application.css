@@ -121,3 +121,57 @@ a {
 .photo {
   border: 1px solid black;
 }
+
+.form {
+  margin-top: 3rem;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-title {
+  padding: 0.5rem;
+}
+
+.form-text-area {
+  padding: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+}
+
+.two-btns {
+  padding: 0.5rem;
+}
+
+.back-btn {
+  padding: 0.5rem;
+  margin-top: 3rem;
+}
+
+.back-btn-holder {
+  width: 100%;
+  text-align: center;
+}
+
+.comment-like-btn {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.like-btn {
+  margin-top: 2rem;
+}
