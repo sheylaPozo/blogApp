@@ -1,0 +1,3 @@
+<%= form_with model: [@post, @post.likes.build], class: "like-btn" do |f| %>
+    <%= f.submit 'Like post' %>
+<% end %>

@@ -3,7 +3,7 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
 
-  after_create :update_counter
+  after_save :update_counter
 
   def update_counter
     user.update(posts_counter: user.posts.size)
