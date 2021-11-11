@@ -7,14 +7,17 @@ development:
   <<: *default
   database: my_blog_db
   host: localhost
-  username: stamenova
-  password: stamenova123
-# test:
-#   <<: *default
-#   database: my_blog_db
+  username: sheyl
+  password: 1412
 
+test:
+  <<: *default
+  database: my_blog_db
+  host: localhost
+  username: sheyl
+  password: 1412
 # production:
 #   <<: *default
 #   database: my_blog_db
-#   username: stamenova
-#   password: stamenova123
+#   username: sheyl
+#   password: 1412

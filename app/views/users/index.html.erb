@@ -3,7 +3,7 @@
     <%= link_to user_path(user) do%>
       <li class="main-list">
       <div class="photo">
-        <%= image_tag user.photo %>
+        <img src="<%= user.photo %>" >
       </div>
       <div class = "main-div-list">
         <p><%= user.name %></p>
