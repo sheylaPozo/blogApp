@@ -10,7 +10,7 @@
 
 <%= render  @user%>
 <ul>
-<% @posts.each_with_index do |post, i|%>
+<% @user.posts.each_with_index do |post, i|%>
   <div>
   <li class="list-posts">
   <%= link_to user_post_path(@user.id, post.id) do%>

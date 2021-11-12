@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
+  let(:user) { User.create(name: 'Cork', photo: 'www.google.com') }
   describe 'GET #index' do
     before { get users_path }
 
@@ -11,14 +12,10 @@ RSpec.describe 'Users', type: :request do
     it "renders 'index' template" do
       expect(response).to render_template('index')
     end
-
-    it 'should include correct placeholder' do
-      expect(response.body).to include('Here will be the name of the current user')
-    end
   end
 
   describe 'GET #show' do
-    before { get user_path(id: 1) }
+    before { get user_path(user) }
 
     it 'should have response status correct(ok)' do
       expect(response).to have_http_status(:ok)
