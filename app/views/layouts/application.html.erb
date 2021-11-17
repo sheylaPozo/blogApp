@@ -11,9 +11,14 @@
   </head>
 
   <body>
-  <% flash.each do |type, msg| %>
-    <%= msg %>
-  <% end %>
+    <header>
+      <div class = 'flash-msg'>
+        <% flash.each do |type, msg| %>
+          <%= msg %>
+        <% end %>
+      </div>
+      <%= render partial: 'shared/header'%>
+    </header>
     <%= yield %>
   </body>
 </html>

@@ -120,6 +120,8 @@ a {
 
 .photo {
   border: 1px solid black;
+  width: 154px;
+  height: 156px;
 }
 
 .form {
@@ -174,4 +176,40 @@ a {
 
 .like-btn {
   margin-top: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: papayawhip;
+}
+
+.flash-msg {
+  font-size: 18px;
+  color: grey;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 1rem;
+  font-size: 20px;
+}
+
+.log-in {
+  margin-top: 1rem;
+}
+
+.field {
+  padding: 0.5rem;
+}
+
+.actions {
+  padding: 1rem;
+}
+
+.sign-share {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
 }
