@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
+gem 'cancancan'
 gem 'devise'
 gem 'pry'
 gem 'rails-controller-testing'

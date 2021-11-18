@@ -174,15 +174,11 @@ a {
   align-items: center;
 }
 
-.like-btn {
-  margin-top: 2rem;
-}
-
 header {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background-color: papayawhip;
+  background-color: gainsboro;
 }
 
 .flash-msg {
@@ -212,4 +208,20 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
+}
+
+.sign-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 20px;
+}
+
+.role {
+  color: blue;
+}
+
+.text-like-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
