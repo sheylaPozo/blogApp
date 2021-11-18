@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :request do
   include Devise::Test::IntegrationHelpers
 
-  let(:user) { User.create(name: 'Mat', email: 'Mat@mail.com', password: 'password') }
+  let(:user) { User.create(name: 'Gary', email: 'Gary@mail.com', password: 'password') }
   let(:post) { user.posts.create(title: 'Post', comments_counter: 2, likes_counter: 4) }
 
   describe 'GET #index' do
