@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   let(:user) do
-    User.new(name: 'Jordy', email: 'example@mail.com', password: 'password', photo: 'jordy_photo', bio: 'I am Jordy',
+    User.new(name: 'Mia', email: 'example@mail.com', password: 'password', photo: 'Mia_photo', bio: 'I am Mia',
              posts_counter: 5)
   end
 

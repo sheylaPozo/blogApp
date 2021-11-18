@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Login Page', type: :feature do
   describe 'Login session' do
     let(:input_type) { %w[email password submit] }
-    let(:user) { User.create(name: 'Polina', email: 'user@example.com', password: 'password') }
+    let(:user) { User.create(name: 'Sheyla', email: 'user@example.com', password: 'password') }
 
     before { visit new_user_session_path }
 
