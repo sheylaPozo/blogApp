@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Post view', type: :feature do
   include Devise::Test::IntegrationHelpers
   describe 'Post index' do
-    let(:user) { User.create(name: 'shey', email: 'shey@example.com', password: 'password') }
+    let(:user) { User.create(name: 'sheyla', email: 'sheyla@example.com', password: 'password') }
 
     describe 'display post information' do
       before do
@@ -15,7 +15,7 @@ RSpec.describe 'Post view', type: :feature do
       end
 
       it 'displays the author`s username.' do
-        expect(page).to have_content('shey')
+        expect(page).to have_content('sheyla')
       end
 
       it 'displays the number of posts the user has written.' do
