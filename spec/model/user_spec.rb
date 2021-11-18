@@ -1,7 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.new(name: 'sheyla', photo: 'sheyla_photo', bio: 'I am sheyla', posts_counter: 5) }
+  let(:user) do
+    User.new(name: 'Jordy', email: 'example@mail.com', password: 'password', photo: 'jordy_photo', bio: 'I am Jordy',
+             posts_counter: 5)
+  end
 
   before { user.save }
 

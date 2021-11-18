@@ -178,12 +178,12 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background-color: gainsboro;
+  background-color: plum;
 }
 
 .flash-msg {
   font-size: 18px;
-  color: grey;
+  color: powderblue;
 }
 
 .nav-bar {

@@ -1,13 +1,13 @@
 <ul class="main-ul">
   <% @users.each do |user| %>
-    <%= link_to user_path(user) do%>
+    <%= link_to user_path(user), id: "user_#{user.id}" do%>
       <li class="main-list">
       <div class="photo">
-       <img src="https://steelform.com/wp-content/uploads/2017/03/testimonial-avatar-150x150.jpg" >
+       <img src="https://trello.com/1/cards/616017c69f234131a64e5ee2/attachments/61967991e9395d68b2c88b8c/download/image.png" >
       </div>
       <div class = "main-div-list">
         <p><%= user.name %></p>
-        <p>Number of posts:<%= user.posts.size %></p>
+        <p>Number of posts:<%= user.posts_counter %></p>
       </div>
       </li>
     <% end %>
