@@ -1,16 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  include Devise::Test::IntegrationHelpers
-
-  let(:user) { User.create(name: 'Mat', email: 'Mat@mail.com', password: 'password') }
+  let(:user) { User.create(name: 'Kolly') }
   let(:post) { user.posts.create(title: 'Post', comments_counter: 2, likes_counter: 4) }
 
   describe 'GET #index' do
-    before do
-      sign_in user
-      get user_posts_path(user_id: post.user_id)
-    end
+    before { get user_posts_path(post.user_id) }
 
     it 'should have response status correct(ok)' do
       expect(response).to have_http_status(:ok)
@@ -27,7 +22,6 @@ RSpec.describe 'Posts', type: :request do
 
   describe 'GET #show' do
     before do
-      sign_in user
       get user_post_path(user_id: user.id, id: post.id)
     end
 

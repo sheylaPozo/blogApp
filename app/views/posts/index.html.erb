@@ -13,8 +13,8 @@
 <% @user.posts.each_with_index do |post, i|%>
   <div>
   <li class="list-posts">
-  <%= link_to user_post_path(@user.id, post.id), id: "redirect_post_#{post.id}" do%>
-      <p>Post #<%= post.title %></p>
+  <%= link_to user_post_path(@user.id, post.id) do%>
+      <p>Post #<%= i +1 %></p>
       <p><%= post.text%></p>
       <div class= 'comments-likes'>
         <p>Comments: <%= post.comments_counter.to_i %></p>
@@ -25,7 +25,7 @@
   </div>
   <div>
     <ul class="<%= comments?(post)%>">
-    <% post.comments.last(3).each do |comment| %>
+    <% post.comments.each do |comment| %>
       <li>
         <p><%= comment.user.name %>: <%= comment.text %> </p>
       </li>
