@@ -1,13 +1,13 @@
 <ul class="main-ul">
   <% @users.each do |user| %>
-    <%= link_to user_path(user) do%>
+    <%= link_to user_path(user), id: "user_#{user.id}" do%>
       <li class="main-list">
       <div class="photo">
-       <img src="https://steelform.com/wp-content/uploads/2017/03/testimonial-avatar-150x150.jpg" >
+       <img src="http://lclip.in/8awq" >
       </div>
       <div class = "main-div-list">
         <p><%= user.name %></p>
-        <p>Number of posts:<%= user.posts.size %></p>
+        <p>Number of posts:<%= user.posts_counter %></p>
       </div>
       </li>
     <% end %>

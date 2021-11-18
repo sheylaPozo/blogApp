@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-sheyla = User.create(name:"sheyla", photo: "https://avatarfiles.alphacoders.com/168/thumb-168030.gif", bio: "I am sheyla, I am passionate about programming. I like video games and movies")
+sheyla = User.create(name:"sheyla", photo: "http://lclip.in/ds08", bio: "I am sheyla, I am passionate about programming. I like video games and movies")
 
 sheyla_post_one = Post.create(title: "How to start your day?", text: "This is description of post that i want to share with you!", user:sheyla)
 sheyla_post_two = Post.create(title: "Why counting cals is important for your weight balance?", text: "This is description of post that i want to share with you!!", user:sheyla)
@@ -23,7 +23,7 @@ sheyla_like_two = Like.create(user:sheyla, post: sheyla_post_two)
 
 
 
-Yve = User.create(name:"Yve", photo: "https://trello.com/1/cards/616017c69f234131a64e5ee2/attachments/618c08f2b1947276e279189e/download/image.png", bio: "I am Yve, I am passionate about baking. In my free time, I like Knitting, watching movies, going to the beach and enjoy the sun.")
+Yve = User.create(name:"Yve", photo: "http://lclip.in/sux4", bio: "I am Yve, I am passionate about baking. In my free time, I like Knitting, watching movies, going to the beach and enjoy the sun.")
 
 Yve_post_one = Post.create(title: "Fitness is important!", text: "This is the description of the post that I want to share with you", user: Yve)
 Yve_post_two = Post.create(title: "Do know how to cook?", text: "This is the description of the post that I want to share with you!", user: Yve)
@@ -39,7 +39,7 @@ Yve_like_one = Like.create(user:Yve, post: Yve_post_one)
 Yve_like_two = Like.create(user:Yve, post: Yve_post_two)
 
 
-Nick = User.create(name:"Nick", photo: "https://trello.com/1/cards/616017c69f234131a64e5ee2/attachments/618c08b7f2a5022fc49372ba/download/image.png", bio: "I am Nick, I am passionate about programming. In my free time, I like free-diving, climbing and enjoy the sun.")
+Nick = User.create(name:"Nick", photo: "http://lclip.in/8fro", bio: "I am Nick, I am passionate about programming. In my free time, I like free-diving, climbing and enjoy the sun.")
 
 Nick_post_one = Post.create(title: "The big secret to sucesss!", text: "This is description of post that i want to share with you!", user: Nick)
 Nick_post_two = Post.create(title: "why is alcohol really bad for your body?", text: "This is description of post that i want to share with you!!", user: Nick)

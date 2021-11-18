@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   describe '#update_counter' do
-    let(:user) { User.create(name: 'Kolly') }
+    let(:user) { User.create(name: 'Mat', email: 'Mat@mail.com', password: 'password') }
     let(:post) { user.posts.create(title: 'Post', comments_counter: 0, likes_counter: 0) }
 
     it 'updates the post counter' do

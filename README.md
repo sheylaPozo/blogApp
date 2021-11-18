@@ -72,7 +72,7 @@ rspec
 RAILS_ENV=test rake db:reset
 ```
 
-## 🤍 Authors:
+## 🤍 Author:
 ---
 👤 **Sheyla Pozo** 🤍
 
@@ -81,7 +81,6 @@ RAILS_ENV=test rake db:reset
 - Linkedin: [Sheyla Pozo](https://www.linkedin.com/in/sheypozo/)
 
 ---
-## 🤝 Contributing
 
 ## 🤝 Contributing:
 

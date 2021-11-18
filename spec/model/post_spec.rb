@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  let(:user) { User.create(name: 'sheyla') }
+  let(:user) { User.create(name: 'Mia', email: 'example@mail.com', password: 'password') }
   let(:post) do
     described_class.create(user: user, title: 'My first post', text: 'Text to post', comments_counter: 0,
                            likes_counter: 0)
