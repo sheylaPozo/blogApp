@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Users', type: :request do
   include Devise::Test::IntegrationHelpers
 
-  let(:user) { User.create(name: 'Mia', email: 'example@mail.com', password: 'password', photo: 'https://trello.com/1/cards/616017c69f234131a64e5ee2/attachments/6196638dd436c203487c7393/download/image.png') }
+  let(:user) { User.create(name: 'Mia', email: 'example@mail.com', password: 'password', photo: 'https://imgur.com/WpXVZTK') }
 
   describe 'GET #index' do
     before do
