@@ -1,0 +1,16 @@
+<ul class="comment__list">
+  <% comments_with_user(comments).each do |c| %>
+    <li class="comment__item">
+      <span class="comment__item-user"><%= c.user.name  %>:  </span>
+      <span class="comment__item-comment"><%= c.text %> </span>
+      <div class="trash__container">
+        <% if can? :destroy, c %>
+          <%= button_to comment_path(c.id), method: :delete, class: "trash-btn" do %>
+            <i class='bx bx-trash-alt box-icon'></i>
+          <% end %>
+        <% end %>
+      </div>
+    </li>
+    <hr />
+  <% end %>
+</ul>

@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.where(id: params[:id]).includes(:posts).take
+    @user = User.find(params[:id])
+    @posts = @user.top_most_recent_posts
   end
 end

@@ -10,6 +10,10 @@
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },
+  "scripts": {
+    "stylelint": "stylelint \"**/*.{css,scss}\"",
+    "lint": "npm run stylelint"
+  },
   "version": "0.1.0",
   "devDependencies": {
     "stylelint": "^13.13.1",
