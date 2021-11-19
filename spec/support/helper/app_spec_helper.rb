@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Helper
   module AppSpec
     def capitalize(title)

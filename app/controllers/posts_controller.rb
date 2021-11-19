@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   load_and_authorize_resource
 
@@ -31,7 +33,7 @@ class PostsController < ApplicationController
     post_to_delete = Post.find(params[:id])
     owner = post_to_delete.user
     if post_to_delete.destroy
-      flash[:notice] = 'Post destroyed successfully!'
+      flash[:notice] = 'Post successfully destroyed!'
     else
       flash[:alert] = 'Unable to delete post'
     end

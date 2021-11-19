@@ -68,7 +68,7 @@ li {
   margin: 0 auto;
   padding: 0.85rem 1.5rem;
   cursor: pointer;
-  background: #cf0136;
+  background: deeppink;
   color: #fff;
   outline: none;
   border: none;
@@ -156,8 +156,8 @@ li {
 
 .liked {
   font-size: 1.85rem;
-  background: #3e43e8;
-  color: #fff;
+  background: hotpink;
+  color: lightcyan;
   padding: 0.5rem;
 }
 
@@ -197,14 +197,14 @@ li {
 }
 
 .trash-btn {
-  background: #760724;
+  background: mediumvioletred;
   outline: none;
   border: none;
   cursor: pointer;
 }
 
 .like-btn {
-  background: #11199d;
+  background: mediumblue;
   margin-left: 0.8rem;
   outline: none;
   border: none;

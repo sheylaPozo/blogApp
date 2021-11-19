@@ -1,12 +1,16 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '3.0.2'
 
 # use cancancan
 gem 'cancancan'
 # Add devise
 gem 'devise'
+# Add devise-jwt
+gem 'devise-jwt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use rails-controller-testing for aserting template
