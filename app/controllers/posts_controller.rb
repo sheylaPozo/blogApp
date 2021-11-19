@@ -1,32 +1,41 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
-    @user = User.where(id: params[:user_id]).includes(:posts).take
+    @user = User.find(params[:user_id])
+    @posts = @user.top_most_recent_posts
   end
 
   def show
-    @post = Post.where(id: params[:id]).includes(:comments).take
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:id])
   end
 
   def new
-    @user = current_user
+    @post = Post.new
   end
 
   def create
-    @post = current_user.posts.build(post_params)
-    if @post.save
-      flash[:notice] = 'Post successfully created!'
-      redirect_to user_post_path(user_id: @post.user_id, id: @post.id)
+    new_post = Post.new(post_params)
+    current_user.posts << new_post
+    if new_post.save
+      flash[:notice] = 'Post created!'
+      redirect_to user_posts_path(new_post.user.id)
     else
+      flash.now[:alert] = 'Failed to create post!'
       render :new
     end
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    authorize! :destroy, @post
-    @post.destroy
-    flash[:notice] = 'Post successfully deleted!'
-    redirect_to root_path
+    post_to_delete = Post.find(params[:id])
+    owner = post_to_delete.user
+    if post_to_delete.destroy
+      flash[:notice] = 'Post destroyed successfully!'
+    else
+      flash[:alert] = 'Unable to delete post'
+    end
+    redirect_to user_posts_path(owner.id)
   end
 
   private

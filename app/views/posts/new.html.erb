@@ -1,15 +1,14 @@
-<%= form_with model:[ @user, @user.posts.build], class: "form" do |f|%>
-  <%= f.label :title %>
-  <%= f.text_field :title, class: 'form-title' %>
-  <%= f.label :text %>
-  <%= f.text_field :text, class: 'form-text-area' %>
-  <%= f.submit "Post" %>
-<% end %>
-
-<div class = "back-btn-holder">
-  <button class = "back-btn">
-  <%= link_to 'Back', root_path%>
-  </button>
+<div class="form__container">
+  <%= form_with url: posts_path, model: @post do |f| %>
+    <h6 class="form__header">Create new post</h6>
+    <div class="field">
+      <%= f.text_field :title, class: "input", required: true, placeholder: "Title", value: nil %>
+    </div>
+    <div class="field">
+      <%= f.text_area :text, size: "60x10", required: true, placeholder: "Write text here...", value: nil, class: "text_area" %>
+    </div>
+    <div class="actions">
+      <%= f.submit class: "btn" %>
+    </div>
+  <% end %>
 </div>
-
-

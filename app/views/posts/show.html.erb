@@ -1,42 +1,26 @@
-
-<div class = 'post-by-id'>
-  <p>Post #<%= @post.title %> by <%= @post.user.name %></p>
-  <div class = "comments-likes ">
-    <p>Comments: <%= @post.comments_counter.to_i %></p>
-    <p>Likes: <%= @post.likes_counter.to_i %></p>
+<div class="profile__container">
+  <div class="post">
+    <div class="header">
+      <%= link_to user_posts_path(@user.id) do %>
+        <h5 class="post__title"><%= capitalize(@post.title) %> by <%= capitalize(@user.name) %></h5>
+      <% end %>
+      <div class="post__likes_comments_counter">
+        <%= render partial: "posts/no_of_comments", locals: { total_comments: @post.comments_counter } %>, <%= render partial: "posts/no_of_likes", locals: { total_likes: @post.likes_counter } %>
+      </div>
+    </div>
+    <div class="like__container">
+      <% if can? :destroy, @post %>
+        <%= button_to post_path(@post.id), method: :delete, class: "trash-btn" do %>
+          <i class='bx bx-trash-alt box-icon'></i>
+        <% end %>
+      <% end %>
+      <%= render partial: "like_view", locals: { post: @post } %>
+    </div>
+    <p class="post__text"><%= @post.text %> </p>
   </div>
-  <div class = "text-like-wrapper">
-      <p class = 'post-by-id-post'><%= @post.text %></p>
-        <% if can? :destroy,  @post %>
-          <button>
-            <%= link_to "Delete Post", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
-          </button>
-        <%end%>
-      <%= render partial: 'likes/form' %>
-  </div>
-</div>
-<div>
-  <ul class="<%= comments?(@post)%>">
-    <% @post.comments.each do |comment| %>
-      <li>
-        <%= comment.user.name %>:
-        <%= comment.text %>
-      <% if can? :destroy,  comment %>
-        <button>
-          <%= link_to "Delete", comment_path(comment), method: :delete, data: { confirm: "Are you sure?" } %>
-        </button>
-      <%end%>
-      </li>
+  <% if can_display_comments?(@post.comments_counter) %>
+    <%= render partial: "comment_card", locals: { comments: @post.comments } %>
   <% end %>
-  </ul>
-</div>
+  <%= render partial: "comment_form", locals: { post: @post } %>
 
-<div class = "comment-like-btn">
-  <%= render partial: 'comments/form' %>
-</div>
-
-<div class = "back-btn-holder">
-  <button class = "back-btn">
-  <%= link_to 'Back', root_path%>
-  </button>
 </div>

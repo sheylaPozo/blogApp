@@ -14,214 +14,208 @@
  *= require_self
  */
 
-* {
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+
+*,
+*::before,
+*::after {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
+html {
+  font-size: 10px;
 }
 
-.main-ul {
-  margin-top: 5rem;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.main-list {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.main-div-list {
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-  border: 1px solid black;
-  height: 156px;
-  align-items: center;
-  padding: 3rem;
-  width: 100%;
-}
-
-.bio {
-  padding: 1rem;
-  margin-top: 1rem;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  border: 1px solid black;
-}
-
-.list-posts {
-  padding: 1rem;
-  margin-top: 2rem;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid black;
-}
-
-.comments-likes {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.btn {
-  font-size: 22px;
-  padding: 0.5rem;
-  margin-top: 3rem;
-  margin-left: 50%;
-  margin-bottom: 3rem;
+body {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
-.list-comments {
-  padding: 1rem;
-  line-height: 28px;
-  margin-top: 1rem;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid black;
+img {
+  object-fit: cover;
+  max-width: 100%;
 }
 
-.no-.list-comments {
-  display: none;
+li {
+  list-style: none;
 }
 
-.post-by-id {
-  margin-top: 5rem;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid black;
-  padding: 1rem;
+.mt-2 {
+  margin-top: 2rem;
 }
 
-.post-by-id-post {
+.mt-1 {
   margin-top: 1rem;
 }
 
-.photo {
-  border: 1px solid black;
-  width: 154px;
-  height: 156px;
+.mb-2 {
+  margin-bottom: 2rem;
 }
 
-.form {
-  margin-top: 3rem;
-  width: 200px;
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  cursor: pointer;
+  background: #cf0136;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+.comment {
+  margin-top: 1rem;
+  width: 15rem;
+  font-size: 1.8rem;
   margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-title {
-  padding: 0.5rem;
-}
-
-.form-text-area {
-  padding: 0.5rem;
-}
-
-.buttons {
-  display: flex;
-  gap: 1rem;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
-}
-
-.two-btns {
-  padding: 0.5rem;
-}
-
-.back-btn {
-  padding: 0.5rem;
-  margin-top: 3rem;
-}
-
-.back-btn-holder {
-  width: 100%;
   text-align: center;
 }
 
-.comment-like-btn {
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container {
+  padding: 0 2rem;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: gainsboro;
+.profile__container {
+  max-width: 50rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2.5rem 0;
 }
 
-.flash-msg {
-  font-size: 18px;
-  color: grey;
+.bio {
+  border: 1px solid #000;
+  padding: 0.8rem 0.8rem 1.5rem;
 }
 
-.nav-bar {
-  display: flex;
-  gap: 1rem;
-  font-size: 20px;
+.bio__heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-.log-in {
-  margin-top: 1rem;
+.bio__text {
+  font-size: 1.65rem;
+  font-weight: 300;
+}
+
+.comment__list {
+  padding: 0.8rem;
+}
+
+.comment__item {
+  font-size: 1.85rem;
+}
+
+.form__container {
+  max-width: 50rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2.5rem 0;
+}
+
+.form__header {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 2rem;
 }
 
 .field {
+  margin-bottom: 1.8rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 1.35rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem 0.5rem;
+}
+
+.text_area {
+  padding: 0.8rem 0.5rem;
+}
+
+.like__container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.liked {
+  font-size: 1.85rem;
+  background: #3e43e8;
+  color: #fff;
   padding: 0.5rem;
 }
 
+.form__links {
+  font-size: 1.45rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.form__links a {
+  margin-bottom: 2rem;
+}
+
+.form__links a:hover {
+  text-decoration: underline;
+}
+
+.check__label {
+  font-size: 1.5rem;
+}
+
 .actions {
-  padding: 1rem;
-}
-
-.sign-share {
   display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
+  justify-content: center;
+  font-size: 1.5rem;
 }
 
-.sign-nav {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 20px;
+.caution {
+  font-size: 1.7rem;
 }
 
-.role {
-  color: blue;
+.notices {
+  font-size: 1.8rem;
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto;
 }
 
-.text-like-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+.trash-btn {
+  background: #760724;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.like-btn {
+  background: #11199d;
+  margin-left: 0.8rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.box-icon {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.trash__container {
+  text-align: right;
 }

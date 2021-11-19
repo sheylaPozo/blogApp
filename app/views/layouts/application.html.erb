@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BlogApp</title>
+    <title>RailsBlogApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header>
-      <div class = 'flash-msg'>
-        <% flash.each do |type, msg| %>
-          <%= msg %>
-        <% end %>
+    <%= render partial: "shared/header" %>
+    <div class="container">
+      <div class="notices">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
       </div>
-      <div class = "sign-nav">
-        <%= render partial: 'shared/header'%>
-        <p class = "role">
-          <% if current_user != nil%>
-            <%= current_user.name.capitalize%>
-          <% end %>
-        </p>
-      </div>
-    </header>
-    <%= yield %>
+      <%= yield %>
+    </div>
   </body>
 </html>
