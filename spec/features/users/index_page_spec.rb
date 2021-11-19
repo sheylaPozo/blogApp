@@ -3,16 +3,16 @@ require 'rails_helper'
 RSpec.feature 'Users Index Page', type: :feature do
   signin_user
   background do
-    @User1 = create(:user, name: 'User1')
-    @User2 = create(:user, name: 'User2')
+    @user1 = create(:user, name: 'user1')
+    @user2 = create(:user, name: 'user2')
     visit(root_path)
   end
 
   describe 'GET /index' do
     scenario 'I should see usernames of other users' do
       expect(page).to have_content @user.name
-      expect(page).to have_content @User1.name
-      expect(page).to have_content @User2.name
+      expect(page).to have_content @user1.name
+      expect(page).to have_content @user2.name
       expect(all(:css, '.profile').size).to eq(3)
     end
 
@@ -31,8 +31,8 @@ RSpec.feature 'Users Index Page', type: :feature do
     end
 
     scenario "I should be redirected to user's show page when I click on a user" do
-      find_link("user_#{@User1.id}").click
-      expect(current_path).to eq user_path(@User1.id)
+      find_link("user_#{@user1.id}").click
+      expect(current_path).to eq user_path(@user1.id)
     end
   end
 end
