@@ -7,7 +7,7 @@ module Api
         post_id = params[:post_id]
         @comments = Comment.where({ post_id: post_id }).order(:created_at)
         render json: {
-          success: true, message: "Loaded all comments for post #{post_id}", data: { comments: @comments }
+          success: true, message: "Loaded all comments for the post #{post_id}", data: { comments: @comments }
         }
       end
 
