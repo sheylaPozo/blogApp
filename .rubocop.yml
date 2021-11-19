@@ -10,51 +10,27 @@ AllCops:
 
   DisplayCopNames: true
 
-Layout/LineLength:
-  Max: 120
-Metrics/MethodLength:
-  Include:
-    - "app/controllers/*"
-    - "app/models/*"
-  Max: 20
-Metrics/AbcSize:
-  Include:
-    - "app/controllers/*"
-    - "app/models/*"
-  Max: 50
-Metrics/ClassLength:
-  Max: 150
-Metrics/BlockLength:
-  IgnoredMethods: ['describe']
-  Max: 30
-
 Style/Documentation:
   Enabled: false
-Style/ClassAndModuleChildren:
+Layout/LineLength:
   Enabled: false
-Style/EachForSimpleLoop:
+Metrics/BlockLength:
   Enabled: false
-Style/AndOr:
+Metrics/PerceivedComplexity:
   Enabled: false
-Style/DefWithParentheses:
+Metrics/ParameterLists:
   Enabled: false
-Style/FrozenStringLiteralComment:
-  EnforcedStyle: never
-
-Layout/HashAlignment:
-  EnforcedColonStyle: key
-Layout/ExtraSpacing:
-  AllowForAlignment: false
-Layout/MultilineMethodCallIndentation:
-  Enabled: true
-  EnforcedStyle: indented
-Lint/RaiseException:
+Style/GuardClause:
   Enabled: false
-Lint/StructNewOverride:
+Metrics/ClassLength:
   Enabled: false
-Style/HashEachMethods:
-  Enabled: false
-Style/HashTransformKeys:
-  Enabled: false
-Style/HashTransformValues:
+Metrics/MethodLength:
+  Max: 1000000
+Metrics/CyclomaticComplexity:
+  Max: 1000000
+Metrics/AbcSize:
+  Max: 1000000
+Metrics/ModuleLength:
+  Max: 1000000
+Style/GlobalVars:
   Enabled: false

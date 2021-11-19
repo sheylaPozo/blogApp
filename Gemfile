@@ -7,6 +7,8 @@ ruby '3.0.0'
 gem 'cancancan'
 # Add devise
 gem 'devise'
+# Add devise-jwt
+gem 'devise-jwt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use rails-controller-testing for aserting template
