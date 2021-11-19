@@ -1,9 +1,39 @@
-<div class="profile__container">
-  <%= render partial: "users/user_card", locals: { user: @user } %>
-    <ul class="post__comment">
-      <% @posts.each do |p| %>
-        <%= render partial: "post_with_comment_card", locals: { post: p } %>
-      <% end %>
-    </ul>
-  <button class="btn">Pagination</button>
+
+<div class = "buttons">
+  <button class = "two-btns">
+  <%= link_to 'Back', root_path %>
+  </button>
+  <button class = "two-btns">
+  <%= link_to "New Post", new_user_post_path(user_id: @user.id) %>
+  </button>
 </div>
+
+<%= render  @user%>
+<ul>
+<% @user.posts.each_with_index do |post, i|%>
+  <div>
+  <li class="list-posts">
+  <%= link_to user_post_path(@user.id, post.id) do%>
+      <p>Post #<%= i +1 %></p>
+      <p><%= post.text%></p>
+      <div class= 'comments-likes'>
+        <p>Comments: <%= post.comments_counter.to_i %></p>
+        <p>Likes: <%= post.likes_counter.to_i %></p>
+      </div>
+      <% end %>
+    </li>
+  </div>
+  <div>
+    <ul class="<%= comments?(post)%>">
+    <% post.comments.each do |comment| %>
+      <li>
+        <p><%= comment.user.name %>: <%= comment.text %> </p>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+</ul>
+
+<button class= 'btn'>Pagination</button>
+

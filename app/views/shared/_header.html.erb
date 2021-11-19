@@ -1,21 +1,19 @@
-<header>
-  <nav class="nav">
-    <ul class="nav__list">
-      <% if user_signed_in? %>
-        <li class="nav__item">
-          <%= link_to "New post", new_post_path, class: "nav__link" %>
-        </li>
-        <li class="nav__item">
-          <%= link_to "Log out", destroy_user_session_path, class: "nav__link logout", method: :delete %>
-        </li>
-        <li class="nav__item">
-          <span class="login_status"><%= current_user.role ||= 'user' %></span>
-        </li>
-      <% else %>
-        <li class="nav__item">
-          <%= link_to "Login", new_user_session_path, class: "nav__link" %>
-        </li>
-      <% end %>
-    </ul>
-  </nav>
-</header>
+<nav>
+  <ul class = 'nav-bar'>
+    <% if user_signed_in? %>
+      <li class = "nav-list">
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      </li>
+      <li class = "nav-list">
+        <%= link_to "Edit Profile", edit_user_registration_path %>
+      </li>
+    <% else %>
+      <li class = "nav-list">
+        <%= link_to "Sign In", new_user_session_path %>
+      </li>
+      <li class = "nav-list">
+        <%= link_to "Sign Up", new_user_registration_path %>
+      </li>
+    <% end %>
+  </ul>
+</nav>

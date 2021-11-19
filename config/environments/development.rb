@@ -38,6 +38,8 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
@@ -73,21 +75,4 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
-  # config.after_initialize do
-  #   Bullet.enable = true
-  #   Bullet.alert = ENV['BULLET_ALERT']
-  #   Bullet.bullet_logger = true
-  #   Bullet.console = true
-  #   Bullet.rails_logger = true
-  # end
-
-  # devisie config settings
-    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-    config.action_mailer.perform_deliveries = true
-
-  # letter opener config
-  config.action_mailer.delivery_method = :letter_opener
-  LetterOpener.configure do |config|
-    config.message_template = :light
-  end 
 end
