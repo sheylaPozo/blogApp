@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def comments_with_user(comments)
     comments.includes(:user)
