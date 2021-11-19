@@ -5,19 +5,19 @@ default: &default
 
 development:
   <<: *default
-  database: my_blog_db
+  database: blogApp_db
   host: localhost
-  username: sheyl
+  username: sheyla
   password: 123s
 
 test:
   <<: *default
-  database: my_blog_db
+  database: blogApp_db
   host: localhost
-  username: sheyl
+  username: sheyla
   password: 123s
 # production:
 #   <<: *default
-#   database: my_blog_db
-#   username: sheyl
+#   database: blogApp_db 
+#   username: sheyla
 #   password: 123s
