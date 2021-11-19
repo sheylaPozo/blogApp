@@ -5,7 +5,7 @@ module Api
 
       def index
         @posts = Post.order(:created_at)
-        render json: { success: true, message: 'Loaded all posts', data: { posts: @posts } }
+        render json: { success: true, message: 'All posts loaded', data: { posts: @posts } }
       end
     end
   end
