@@ -1,0 +1,6 @@
+<li class="post__comment-item mb-2">
+   <%= render partial: "post_card", locals: { post: post } %>
+  <% if can_display_comments?(post.comments_counter) %>
+    <%= render partial: "comment_card", locals: { comments: post.most_recent_comments } %>
+  <% end %>
+</li>

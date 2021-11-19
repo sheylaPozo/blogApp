@@ -1,17 +1,11 @@
-<ul class="main-ul">
-  <% @users.each do |user| %>
-    <%= link_to user_path(user), id: "user_#{user.id}" do%>
-      <li class="main-list">
-      <div class="photo">
-       <img src="http://lclip.in/8awq" >
-      </div>
-      <div class = "main-div-list">
-        <p><%= user.name %></p>
-        <p>Number of posts:<%= user.posts_counter %></p>
-      </div>
+<div class="profile__container">
+  <ul class="profile__list">
+    <% @users.each do |u| %>
+      <li class="profile__item">
+        <%= link_to user_path(u.id), id: "user_#{u.id}" do %>
+          <%= render partial: "user_card", locals: { user: u } %>
+        <% end %>
       </li>
     <% end %>
-  <% end %>
-</ul>
-
-
+  </ul>
+</div>

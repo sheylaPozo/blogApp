@@ -2,7 +2,7 @@
 
 ![Microverse](https://img.shields.io/badge/Microverse2.0-blueviolet) ![app](https://img.shields.io/badge/Myapp-blue)
 
-Blog App 🤍
+Blog App
 
 > Blog website that shows a list of posts and empower readers to interact with them by adding comments and liking posts. This project is part of Microverse's 2.0 curriculum, following the guidelines of ![Microverse](https://img.shields.io/badge/Microverse2.0-blueviolet)[🔗](https://www.microverse.org/) for best practices.
 
@@ -72,7 +72,7 @@ rspec
 RAILS_ENV=test rake db:reset
 ```
 
-## 🤍 Author:
+## 🤍 Authors:
 ---
 👤 **Sheyla Pozo** 🤍
 
@@ -81,23 +81,24 @@ RAILS_ENV=test rake db:reset
 - Linkedin: [Sheyla Pozo](https://www.linkedin.com/in/sheypozo/)
 
 ---
+## 🤝 Contributing
 
-## 🤝 Contributing:🤍
+## 🤝 Contributing:
 
 Contributions, issues, and feature requests are welcome! 🤍
 
 Feel free to check the [issues page](https://github.com/blogApp/issues).
 
-## 🤍 Show your support 🤍
+## 🤍 Show your support
 
 Give a `⭐️` if you like this project!
 
-## 🤍 Acknowledgments 🤍
+## 🤍 Acknowledgments
 
 Hat tip to anyone whose code was used:
 - Microverse's guidelines
 - Inspiration
 
-## 📝 License 🤍
+## 📝 License
 
 This project is [MIT](./LICENSE.md) licensed.
