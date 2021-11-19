@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     post = Post.find(params[:post_id])
     new_comment = Comment.create(user_id: current_user.id, post_id: post.id, text: comment_params[:text])
     if new_comment.save
-      flash[:notice] = 'Comment created!'
+      flash[:notice] = 'Comments created!'
       redirect_to user_post_path(post.user.id, post.id)
     else
       flash.now[:error] = 'Unable to create comment!'
