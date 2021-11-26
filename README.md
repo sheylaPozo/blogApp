@@ -85,7 +85,7 @@ RAILS_ENV=test rake db:reset
 
 Contributions, issues, and feature requests are welcome! 🤍
 
-Feel free to check the [issues page](https://github.com/blogApp/issues).
+Feel free to check the [issues page](https://github.com/sheylaPozo/blogApp/issues).
 
 ## 🤍 Show your support:
 
